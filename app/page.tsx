@@ -2,99 +2,76 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-pink-100 min-h-screen flex flex-col">
+      <header className="bg-pink-500 text-white py-4 shadow-md">
+        <div className="container mx-auto px-4">
+          <h1 className="text-3xl font-bold">The Girlish Talk</h1>
         </div>
+      </header>
+
+      <main className="flex-1 container mx-auto px-4 py-10">
+        <section className="text-center">
+          <h2 className="text-4xl font-semibold text-pink-700 mb-4">
+            Welcome to The Girlish Talk!
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Your go-to platform for everything empowering, fashionable, and fun.
+            Join our community of strong, inspiring women who uplift and support
+            one another.
+          </p>
+          <button className="bg-pink-600 text-white py-3 px-6 rounded-full shadow-md hover:bg-pink-700 transition duration-300">
+            Get Started
+          </button>
+        </section>
+
+        <section className="mt-16">
+          <h3 className="text-2xl font-semibold text-pink-700 mb-6">
+            Latest Posts
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+              <h4 className="text-xl font-bold mb-2">How to Be Confident</h4>
+              <p className="text-gray-600">
+                Discover tips and strategies to boost your self-esteem and walk
+                with confidence.
+              </p>
+              <button className="mt-4 text-pink-600 font-semibold hover:underline">
+                Read More
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+              <h4 className="text-xl font-bold mb-2">Fashion Tips for 2024</h4>
+              <p className="text-gray-600">
+                Stay up-to-date with the latest fashion trends and tips to keep
+                your wardrobe stylish.
+              </p>
+              <button className="mt-4 text-pink-600 font-semibold hover:underline">
+                Read More
+              </button>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+              <h4 className="text-xl font-bold mb-2">Self-Care 101</h4>
+              <p className="text-gray-600">
+                Learn how to prioritize your well-being with practical self-care
+                tips.
+              </p>
+              <button className="mt-4 text-pink-600 font-semibold hover:underline">
+                Read More
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="bg-pink-500 text-white py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p>
+            &copy; {new Date().getFullYear()} The Girlish Talk. All rights
+            reserved.
+          </p>
+        </div>
       </footer>
     </div>
   );
