@@ -80,7 +80,7 @@ export default async function Home() {
             Recent Posts
           </h3>
           <div className="space-y-6">
-            {posts.length > 0 ? (
+            {posts?.length > 0 ? (
               posts.map((post: any, index: any) => (
                 <div
                   key={index}
