@@ -38,7 +38,7 @@ export default async function Home() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
               <h3 className="text-xl font-bold mb-2">Health Problems</h3>
               <p className="text-gray-600">
-                Get advice and insights on common women's health issues.
+                Get advice and insights on common women&apos;s health issues.
               </p>
             </div>
 
