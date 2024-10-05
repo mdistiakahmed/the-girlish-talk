@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/navbar/Header";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,14 +17,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: `The Girlish Talk - Your Hub for Women's Fashion, Health, Psychology & Relationship Advice`,
-  description: `Explore insightful articles on women's fashion, health tips, self-esteem, psychology, and relationship advice. Empower yourself with expert guidance at The Girlish Talk—your go-to platform for women's well-being and lifestyle.`,
+  title: `The Girlish Talk - Your Hub for Women&apos;s Fashion, Health, Psychology & Relationship Advice`,
+  description: `Explore insightful articles on women&apos;s fashion, health tips, self-esteem, psychology, and relationship advice. Empower yourself with expert guidance at The Girlish Talk—your go-to platform for women&apos;s well-being and lifestyle.`,
   other: {
     "google-site-verification": "32hSEeIVmJJo5fkxLUYCPEO_uIwgUoMInetfXN_U5SY",
   },
   openGraph: {
-    title: `The Girlish Talk - Your Hub for Women's Fashion, Health, Psychology & Relationship Advice`,
-    description: `Explore insightful articles on women's fashion, health tips, self-esteem, psychology, and relationship advice. Empower yourself with expert guidance at The Girlish Talk—your go-to platform for women's well-being and lifestyle.`,
+    title: `The Girlish Talk - Your Hub for Women&apos;s Fashion, Health, Psychology & Relationship Advice`,
+    description: `Explore insightful articles on women&apos;s fashion, health tips, self-esteem, psychology, and relationship advice. Empower yourself with expert guidance at The Girlish Talk—your go-to platform for women&apos;s well-being and lifestyle.`,
     type: "article",
     locale: "en_US",
     url: `https://www.thegirlishtalk.com/`,
@@ -46,6 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-B2DGF1TSZ2" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
