@@ -84,7 +84,7 @@ export default async function Home() {
                 {category.description}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {category.posts.length > 0 ? (
+                {category.posts?.length > 0 ? (
                   category.posts.map((post: any, index: any) => (
                     <div
                       key={index}
