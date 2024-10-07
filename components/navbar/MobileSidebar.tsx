@@ -62,7 +62,7 @@ const MobileSidebar = () => {
             <nav className="mt-8 flex flex-col space-y-4">
               {category.map((c: any, index: any) => (
                 <Link
-                  href={`/category/women-fashion`}
+                  href={`/${c.toLowerCase()}`}
                   className="hover:text-pink-500"
                   key={index}
                 >

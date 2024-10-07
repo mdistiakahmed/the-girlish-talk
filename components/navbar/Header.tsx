@@ -14,7 +14,7 @@ const Header = () => {
         <nav className="hidden md:flex space-x-6">
           {category.map((c: any, index: any) => (
             <Link
-              href={`/category/women-fashion`}
+              href={`/${c.toLowerCase()}`}
               className="hover:text-pink-200"
               key={index}
             >

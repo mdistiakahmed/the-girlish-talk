@@ -129,9 +129,29 @@ const MyPortableTextImage = ({ value }: any) => {
   );
 };
 
+const MyPortableTextVideo = ({ value }: any) => {
+  const { url, title } = value;
+
+  return (
+    <div className="w-full flex justify-center my-8">
+      <iframe
+        width="560"
+        height="315"
+        src={url.replace("watch?v=", "embed/")}
+        title={title || "Embedded Video"}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="rounded-lg"
+      ></iframe>
+    </div>
+  );
+};
+
 const myPortableTextComponents = {
   types: {
     image: MyPortableTextImage,
+    videoEmbed: MyPortableTextVideo,
   },
   marks: {
     code: ({ children }: any) => <CodeBlock>{children}</CodeBlock>,

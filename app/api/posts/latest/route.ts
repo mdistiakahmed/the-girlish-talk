@@ -11,7 +11,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
       }
   `;
 
-  const data = await client.fetch(query, undefined, { cache: "default" });
+  const data = await client.fetch(query, undefined, { cache: "no-cache" });
 
   const response = NextResponse.json({ data });
 
