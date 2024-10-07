@@ -27,3 +27,21 @@ export async function fetchPostBySlug(slug: string) {
     return null;
   }
 }
+
+export async function fetch4PostByCategory(category: string) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/category?category=${category.toLocaleLowerCase()}`
+    );
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch post with slug: ${category}`);
+    }
+
+    const data = await res.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching post:", error);
+    return null;
+  }
+}

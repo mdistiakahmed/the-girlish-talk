@@ -2,8 +2,8 @@ export const category = [
   "Fashion",
   "Health",
   "Relationship",
-  "Child-care",
-  "Mental-Health",
-  "Home Decor",
-  "Self-care",
+  "Nursery",
+  "Psyche",
+  "Decor",
+  "Self-Care",
 ];
