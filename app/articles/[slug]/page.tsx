@@ -17,12 +17,10 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: post.title,
-    description: `Read more about ${post.title} by ${post.author} on ${new Date(
-      post.publishedAt
-    ).toLocaleDateString()}`,
+    description: post.excerpt,
     openGraph: {
       title: post.title,
-      description: post.body.slice(0, 155), // Limit description length
+      description: post.excerpt,
       url: `/posts/${post.slug}`,
       images: [
         {
@@ -167,6 +165,12 @@ const myPortableTextComponents = {
     ),
     h2: ({ children }: any) => (
       <h2 className="text-2xl font-semibold text-gray-800 my-4">{children}</h2>
+    ),
+    h3: ({ children }: any) => (
+      <h3 className="text-xl font-bold text-gray-900 my-4">{children}</h3>
+    ),
+    h4: ({ children }: any) => (
+      <h4 className="text-lg font-semibold text-gray-800 my-4">{children}</h4>
     ),
     normal: ({ children }: any) => <p className="my-4">{children}</p>,
   },

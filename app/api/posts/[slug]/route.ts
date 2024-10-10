@@ -22,7 +22,8 @@ export async function GET(req: NextRequest, { params }: any) {
         description
       },
       body,
-      publishedAt
+      publishedAt,
+      excerpt
     }
   `;
 
