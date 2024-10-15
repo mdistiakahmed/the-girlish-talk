@@ -23,7 +23,7 @@ const CategoryPage = async ({ params }: any) => {
           {posts.map((post: any) => (
             <div
               key={post.slug.current}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              className="bg-white border  overflow-hidden  transition-shadow duration-300"
             >
               <img
                 src={post.mainImageUrl}

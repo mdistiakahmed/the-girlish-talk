@@ -1,6 +1,9 @@
 export const fetchRecentPosts = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/latest`
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/latest`,
+    {
+      cache: "no-cache",
+    }
   );
   if (!res.ok) {
     console.error(`Failed to fetch post: ${res.status}`);
@@ -31,7 +34,10 @@ export async function fetchPostBySlug(slug: string) {
 export async function fetch4PostByCategory(category: string) {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/category?category=${category.toLocaleLowerCase()}`
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/posts/category?category=${category.toLocaleLowerCase()}`,
+      {
+        cache: "no-cache",
+      }
     );
 
     if (!res.ok) {

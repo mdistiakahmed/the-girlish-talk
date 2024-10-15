@@ -20,5 +20,31 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #456d91;
   }
+
+  /* global.css */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-fadeInUp.delay-2s {
+  animation-delay: 2s;
+}
+
+.animate-fadeInUp.delay-4s {
+  animation-delay: 4s;
+}
+
   
 

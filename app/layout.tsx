@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     siteName: "TheGirlishTalk",
     images: [
       {
-        url: "girls.webp",
+        url: "girl_talking.webp",
         width: 1200,
         height: 630,
-        alt: "Three girl smiling",
+        alt: "Two girl talking",
       },
     ],
   },
